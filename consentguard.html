@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConsentGuard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ConsentGuard</h1>
+        <p>AI-Powered Privacy Assistant</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Website Information -->
+        <section>
+            <h2>Website Analysis</h2>
+
+            <p>
+                Website:
+                <span id="website-name">example.com</span>
+            </p>
+
+            <p>
+                Service:
+                <span id="service-purpose">Shopping</span>
+            </p>
+        </section>
+
+        <!-- Privacy Score -->
+        <section>
+            <h2>Privacy Score</h2>
+
+            <div id="privacy-score">
+                72/100
+            </div>
+        </section>
+
+        <!-- Form Analysis -->
+        <section>
+            <h2>Requested Information</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Required</th>
+                        <th>Assessment</th>
+                        <th>Risk</th>
+                    </tr>
+                </thead>
+
+                <tbody id="field-results">
+
+                    <tr>
+                        <td>Name</td>
+                        <td>Yes</td>
+                        <td>Justified</td>
+                        <td>Low</td>
+                    </tr>
+
+                    <tr>
+                        <td>Email</td>
+                        <td>Yes</td>
+                        <td>Justified</td>
+                        <td>Low</td>
+                    </tr>
+
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td>No</td>
+                        <td>Potentially Excessive</td>
+                        <td>Medium</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Explanation -->
+        <section>
+            <h2>Explanation</h2>
+
+            <p id="explanation">
+                The purpose of collecting Date of Birth is unclear
+                based on the stated service purpose.
+            </p>
+        </section>
+
+        <!-- Recommendation -->
+        <section>
+            <h2>Recommendation</h2>
+
+            <p id="recommendation">
+                Consider leaving the field blank if the website permits it.
+            </p>
+
+            <button id="generate-alias">
+                Generate Email Alias
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>ConsentGuard © 2026</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
