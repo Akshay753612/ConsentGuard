@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "ConsentGuard - Privacy Assistant",
+  "version": "0.1.0",
+  "description": "Inspect registration forms and preview the personal-data fields a website requests.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Analyze with ConsentGuard",
+    "default_popup": "popup.html"
+  }
+}
