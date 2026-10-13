@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConsentGuard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand-mark" aria-hidden="true">CG</div>
+    <div>
+      <h1>ConsentGuard</h1>
+      <p>Privacy before disclosure</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Registration form scan</h2>
+      <p>Inspect the current page to see which fields it requests. Field values are not collected.</p>
+    </section>
+
+    <button id="analyze-button" class="primary-button" type="button">Analyze current page</button>
+    <p id="status" class="status" role="status" aria-live="polite">Ready to scan the active tab.</p>
+
+    <section id="results" class="results hidden" aria-labelledby="results-title">
+      <div class="results-heading">
+        <h2 id="results-title">Detected fields</h2>
+        <span id="field-count" class="count">0 fields</span>
+      </div>
+      <p id="page-name" class="page-name"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Field</th><th scope="col">Type</th><th scope="col">Required</th></tr>
+          </thead>
+          <tbody id="field-rows"></tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <button id="toggle-json" class="secondary-button" type="button">View JSON</button>
+        <button id="copy-json" class="secondary-button" type="button">Copy JSON</button>
+      </div>
+      <pre id="json-output" class="json-output hidden"><code></code></pre>
+      <p class="note">Prototype only: this version extracts form metadata. DPDP/RAG analysis and Privacy Score are not connected yet.</p>
+    </section>
+  </main>
+
+  <footer>ConsentGuard · Local form inspection</footer>
+  <script src="popup.js"></script>
+</body>
+</html>
