@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Registration Form</title>
+  <style>
+    body { max-width: 560px; margin: 40px auto; padding: 0 20px; font-family: system-ui, sans-serif; color: #1c2d28; }
+    form { display: grid; gap: 14px; padding: 22px; border: 1px solid #d8e4dd; border-radius: 14px; }
+    label { display: grid; gap: 6px; font-size: 14px; }
+    input, select { padding: 10px; border: 1px solid #b8c9bf; border-radius: 7px; font: inherit; }
+    button { padding: 11px; border: 0; border-radius: 8px; color: white; background: #176b58; }
+    .hint { color: #5b7066; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <h1>Demo Registration Form</h1>
+  <p class="hint">Use this local page to demonstrate ConsentGuard. The extension should only inspect field metadata.</p>
+  <form>
+    <label>Full name <input name="full_name" type="text" placeholder="Enter your name" required></label>
+    <label>Email address <input name="email" type="email" placeholder="you@example.com" required></label>
+    <label>Phone number <input name="phone" type="tel" placeholder="Phone number"></label>
+    <label>Date of birth <input name="date_of_birth" type="date"></label>
+    <label>Gender <select name="gender"><option value="">Prefer not to say</option><option>Woman</option><option>Man</option><option>Other</option></select></label>
+    <label><span><input name="marketing_consent" type="checkbox"> Send me product updates</span></label>
+    <button type="submit">Create account (demo only)</button>
+  </form>
+</body>
+</html>
